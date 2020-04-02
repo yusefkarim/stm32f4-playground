@@ -1,3 +1,8 @@
 [build]
-# ISA for Cortex-M4
+# Compilation target for Cortex-M4
 target = "thumbv7em-none-eabi"
+
+rustflags = [
+    # Use the link.x script provided by the cortex-m-rt crate
+    "-C", "link-arg=-Tlink.x",
+]

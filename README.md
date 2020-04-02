@@ -7,6 +7,33 @@
 
 ## Language: [Rust](https://www.rust-lang.org/)
 
+## Getting started:
+
+TODO:
+```sh
+cargo install cargo-edit
+cargo install cargo-flash
+cargo install cargo-binutils
+rustup component add llvm-tools-preview
+```
+
+```sh
+sudo vim /etc/udev/rules.d/70-st-link.rules
+```
+
+```udev
+# STM32F3DISCOVERY rev A/B - ST-LINK/V2
+ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", TAG+="uaccess"
+
+# STM32F3DISCOVERY rev C+ - ST-LINK/V2-1
+ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", TAG+="uaccess"
+```
+
+Uploading code:
+```
+cargo flash --release --chip STM32F401CCUx
+```
+
 ## Goals:
 
 1. Learn embedded systems by not using a HAL library
