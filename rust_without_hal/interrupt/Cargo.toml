@@ -1,5 +1,5 @@
 [package]
-name = "blinky"
+name = "interrupt"
 version = "0.1.0"
 authors = ["Yusef Karim <yusefkarim@riseup.net>"]
 edition = "2018"
