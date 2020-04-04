@@ -34,6 +34,11 @@ Uploading code:
 cargo flash --release --chip STM32F401CCUx
 ```
 
+Creating raw binary file:
+```
+cargo objcopy --release --bin <bin> -- -O binary <bin>.bin
+```
+
 ## Goals:
 
 1. Learn embedded systems by not using a HAL library
@@ -61,5 +66,11 @@ cargo flash --release --chip STM32F401CCUx
 
 ## Resources:
 
-1. [Real Time For the Masses](https://github.com/rtfm-rs/cortex-m-rtfm)
+1. [cargo-binutils](https://github.com/rust-embedded/cargo-binutils)
+2. [cargo-flash](https://github.com/probe-rs/cargo-flash)
+3. [cortex-m-rt startup code crate](https://docs.rs/cortex-m-rt/0.6.12/cortex_m_rt/)
+4. [cortex-m low-level access crate](https://docs.rs/cortex-m/0.6.2/cortex_m/)
+5. [stm32f4 peripheral access crate](https://docs.rs/crate/stm32f4/0.10.0)
+6. [The Embedded Rust Book](https://rust-embedded.github.io/book/)
+7. [Real Time For the Masses](https://github.com/rtfm-rs/cortex-m-rtfm)
 
