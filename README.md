@@ -51,7 +51,7 @@ cargo make bin
 
 ## Goals:
 
-1. Learn embedded systems by not using a HAL library
+1. [ ] Learn embedded system fundamentals by not using a HAL library
   - [x] Learn basic GPIO
   - [ ] Learn about SYSTICK
   - [ ] Learn about Interrupts
@@ -59,20 +59,21 @@ cargo make bin
   - [ ] Learn about UART
   - [ ] Learn about I2C
   - [ ] Learn about SPI
-  - [ ] Learn about ADC/DAC
   - [ ] Learn about DMA
+  - [ ] Learn about ADC
+  - [ ] Learn about DAC
 
-2. Make useful things via abstractions provided by HAL
+2. [ ] Make useful things via abstractions provided by HAL
 
-3. Explore concurrency with RTFM
+3. [ ] Explore concurrency with RTFM
 
-4. Explore concurreny using async/.await
+4. [ ] Explore concurreny using async/.await
 
-5. Explore atomic instructions and when they should be used over other primitives
+5. [ ] Explore atomic instructions and when they should be used over other primitives
 
-6. Contribute back to the Rust community
+6. [ ] Contribute back to the Rust community
 
-7. Explore Cortex-M4 specific use cases in DSP, cryptography, and distributed systems
+7. [ ] Explore Cortex-M4 specific use cases in DSP, cryptography, and distributed systems
 
 ## Resources:
 
