@@ -2,15 +2,15 @@
 #![no_std]
 #![no_main]
 
-use cortex_m::asm::delay;
-use cortex_m_rt::entry;
 use panic_halt as _;
+use cortex_m_rt::entry;
+use cortex_m::asm::delay;
 use stm32f4::stm32f401;
 
 #[entry]
 fn main() -> ! {
     // Take ownership of the device peripherals singleton
-    let dp = stm32f401::Peripherals::take().unwrap();
+    let dp = stm32f401::Peripherals::take().expect("Could not get peripherals");
     // Take and own RCC RegisterBlock out of dp
     let rcc = dp.RCC;
     // Take and own the GPIOC struct out of dp

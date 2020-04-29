@@ -12,7 +12,7 @@
 TODO:
 ```sh
 cargo install cargo-edit
-cargo install cargo-flash
+cargo install cargo-make
 cargo install cargo-binutils
 rustup component add llvm-tools-preview
 ```
@@ -30,27 +30,37 @@ ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", TAG+="uaccess"
 ```
 
 Uploading code:
+```sh
+cargo make flash
 ```
-cargo flash --release --chip STM32F401CCUx
+
+Erase entire flash: 
+```sh
+cargo make erase
 ```
 
 Creating raw binary file:
+```sh
+cargo make bin
 ```
-cargo objcopy --release --bin <bin> -- -O binary <bin>.bin
+
+Start semi-hosting to see debug output:
+```sh
+cargo make bin
 ```
 
 ## Goals:
 
 1. Learn embedded systems by not using a HAL library
-  - [] Learn basic GPIO
-  - [] Learn about SYSTICK
-  - [] Learn about Interrupts
-  - [] Learn about Timers
-  - [] Learn about UART
-  - [] Learn about I2C
-  - [] Learn about SPI
-  - [] Learn about ADC/DAC
-  - [] Learn about DMA
+  - [x] Learn basic GPIO
+  - [ ] Learn about SYSTICK
+  - [ ] Learn about Interrupts
+  - [ ] Learn about Timers
+  - [ ] Learn about UART
+  - [ ] Learn about I2C
+  - [ ] Learn about SPI
+  - [ ] Learn about ADC/DAC
+  - [ ] Learn about DMA
 
 2. Make useful things via abstractions provided by HAL
 
@@ -67,10 +77,11 @@ cargo objcopy --release --bin <bin> -- -O binary <bin>.bin
 ## Resources:
 
 1. [cargo-binutils](https://github.com/rust-embedded/cargo-binutils)
-2. [cargo-flash](https://github.com/probe-rs/cargo-flash)
-3. [cortex-m-rt startup code crate](https://docs.rs/cortex-m-rt/0.6.12/cortex_m_rt/)
-4. [cortex-m low-level access crate](https://docs.rs/cortex-m/0.6.2/cortex_m/)
-5. [stm32f4 peripheral access crate](https://docs.rs/crate/stm32f4/0.10.0)
-6. [The Embedded Rust Book](https://rust-embedded.github.io/book/)
-7. [Real Time For the Masses](https://github.com/rtfm-rs/cortex-m-rtfm)
-
+2. [cargo-make](https://github.com/sagiegurari/cargo-make)
+3. [OpenOCD](http://openocd.org/)
+4. [cargo-flash](https://github.com/probe-rs/cargo-flash)
+5. [cortex-m-rt startup code crate](https://docs.rs/cortex-m-rt/0.6.12/cortex_m_rt/)
+6. [cortex-m low-level access crate](https://docs.rs/cortex-m/0.6.2/cortex_m/)
+7. [stm32f4 peripheral access crate](https://docs.rs/crate/stm32f4/0.10.0)
+8. [The Embedded Rust Book](https://rust-embedded.github.io/book/)
+9. [Real Time For the Masses](https://github.com/rtfm-rs/cortex-m-rtfm)
