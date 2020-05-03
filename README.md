@@ -34,7 +34,7 @@ Uploading code:
 cargo make flash
 ```
 
-Erase entire flash: 
+Erasing entire flash: 
 ```sh
 cargo make erase
 ```
@@ -44,7 +44,7 @@ Creating raw binary file:
 cargo make bin
 ```
 
-Start semi-hosting to see debug output:
+Starting semi-hosting to see debug output:
 ```sh
 cargo make bin
 ```
@@ -52,20 +52,22 @@ cargo make bin
 ## Goals:
 
 * [ ] Learn embedded system fundamentals by not using a HAL library
-    - [x] Learn basic GPIO
-    - [ ] Learn about SYSTICK
-    - [ ] Learn about Interrupts
-    - [ ] Learn about Timers
-    - [ ] Learn about UART
-    - [ ] Learn about I2C
-    - [ ] Learn about SPI
-    - [ ] Learn about DMA
-    - [ ] Learn about ADC
-    - [ ] Learn about DAC
+    - [x] GPIO
+    - [x] SysTick
+    - [ ] Interrupts
+    - [ ] Timers
+    - [ ] UART
+    - [ ] I2C
+    - [ ] SPI
+    - [ ] DMA
+    - [ ] ADC
+    - [ ] DAC
 
 * [ ] Make useful things via abstractions provided by HAL
 
-* [ ] Explore concurrency with RTFM
+* [ ] Explore concurrency through various frameworks
+    - [ ] RTFM
+    - [ ] cmim
 
 * [ ] Explore concurreny using async/.await
 
@@ -86,3 +88,4 @@ cargo make bin
 7. [stm32f4 peripheral access crate](https://docs.rs/crate/stm32f4/0.10.0)
 8. [The Embedded Rust Book](https://rust-embedded.github.io/book/)
 9. [Real Time For the Masses](https://github.com/rtfm-rs/cortex-m-rtfm)
+10. [A look into ways to implement and share data with interrupt handlers in Rust by therealprof](https://therealprof.github.io/blog/interrupt-comparison/)
