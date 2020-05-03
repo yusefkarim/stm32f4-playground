@@ -8,8 +8,8 @@
 ## Language: [Rust](https://www.rust-lang.org/)
 
 ## Getting started:
+These are the high-level steps and requirements you need to run the examples in this repo. I will improve documentation and tooling over time.
 
-TODO:
 ```sh
 cargo install cargo-edit
 cargo install cargo-make
