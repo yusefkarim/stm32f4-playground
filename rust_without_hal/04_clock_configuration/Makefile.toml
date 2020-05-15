@@ -32,4 +32,3 @@ script = ["${OPENOCD_CMD} \"init; arm semihosting enable\""]
 [tasks.attach]
 description = "Attach to running OpenOCD server via GDB"
 script = ["${GDB_CMD} ${TARGET_ELF} -ex \"target remote localhost:3333\""]
-# script = ["${GDB_CMD} ${TARGET_ELF} -batch \"target remote localhost:3333\""]
