@@ -46,7 +46,12 @@ cargo make bin
 
 Starting semi-hosting to see debug output:
 ```sh
-cargo make bin
+cargo make host
+```
+
+Attach to running OpenOCD server via GDB for interactive debugging:
+```sh
+cargo make attach
 ```
 
 ## Goals:
