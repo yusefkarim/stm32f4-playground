@@ -54,7 +54,7 @@ cargo make bin
 * [ ] Learn embedded system fundamentals by not using a HAL library
     - [x] GPIO
     - [x] SysTick
-    - [ ] Interrupts
+    - [x] Interrupts
     - [ ] Timers
     - [ ] UART
     - [ ] I2C
