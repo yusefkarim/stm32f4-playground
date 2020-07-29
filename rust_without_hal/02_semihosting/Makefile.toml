@@ -4,7 +4,8 @@ TARGET_ELF    = "target/${CARGO_MAKE_CRATE_TARGET_TRIPLE}/debug/${CARGO_MAKE_CRA
 TARGET_BIN    = "target/${CARGO_MAKE_CRATE_TARGET_TRIPLE}/debug/${CARGO_MAKE_CRATE_NAME}.bin"
 OPENOCD_INTF  = "-f interface/stlink-v2.cfg"
 OPENOCD_TRGT  = "-f target/stm32f4x.cfg"
-OPENOCD_CMD	  = "openocd ${OPENOCD_INTF} ${OPENOCD_TRGT} -c"
+OPENOCD_CMD   = "openocd ${OPENOCD_INTF} ${OPENOCD_TRGT} -c"
+GDB_CMD       = "arm-none-eabi-gdb -q"
 
 [tasks.flash]
 description = "Flash binary file using STlink debugger, assumes memory address 0x08000000"
@@ -26,3 +27,8 @@ script = ["${OPENOCD_CMD} \"init; reset halt; stm32f4x mass_erase 0; exit\""]
 [tasks.host]
 description = "Use semi-hosting to see debug output, requires STlink debugger"
 script = ["${OPENOCD_CMD} \"init; arm semihosting enable\""]
+
+
+[tasks.attach]
+description = "Attach to running OpenOCD server via GDB"
+script = ["${GDB_CMD} ${TARGET_ELF} -ex \"target remote localhost:3333\""]
