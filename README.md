@@ -56,6 +56,8 @@ cargo make bin
     - [x] SysTick
     - [x] Interrupts
     - [ ] Timers
+        - [x] Advanced Timers
+        - [ ] General Purpose Timers
     - [ ] UART
     - [ ] I2C
     - [ ] SPI
