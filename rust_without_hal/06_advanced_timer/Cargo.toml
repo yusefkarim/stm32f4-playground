@@ -1,5 +1,5 @@
 [package]
-name = "timer"
+name = "advanced_timer"
 version = "0.1.0"
 authors = ["Yusef Karim <yusefkarim@riseup.net>"]
 edition = "2018"
@@ -11,7 +11,6 @@ panic-halt = "0.2.0"
 
 # Provides startup code and useful attributes
 # https://docs.rs/cortex-m-rt/0.6.12/cortex_m_rt/
-# cortex-m-rt = {version = "0.6.12", features = ["device"]}
 cortex-m-rt = "0.6.12"
 
 # Provides low-level access to registers and assembly instructions
