@@ -1,7 +1,7 @@
 #![no_std]
 #![no_main]
 use cortex_m_rt::entry;
-use embedded_nrf24l01::NRF24L01;
+use embedded_nrf24l01::{Configuration, CrcMode, DataRate, NRF24L01};
 use hal::prelude::*;
 use hal::spi::{Mode, Phase, Polarity, Spi};
 use panic_halt as _;
@@ -52,7 +52,17 @@ fn main() -> ! {
         let ce = gpioa.pa4.into_push_pull_output();
         let csn = gpioa.pa3.into_push_pull_output();
         // nrf24l01 setup
-        let radio = NRF24L01::new(ce, csn, spi).unwrap();
+        let mut radio = NRF24L01::new(ce, csn, spi).unwrap();
+        radio.set_frequency(8).unwrap();
+        radio.set_auto_retransmit(0, 0).unwrap();
+        radio.set_rf(&DataRate::R2Mbps, 3).unwrap();
+        radio
+            .set_pipes_rx_enable(&[true, false, false, false, false, false])
+            .unwrap();
+        radio.set_auto_ack(&[false; 6]).unwrap();
+        radio.set_crc(CrcMode::Disabled).unwrap();
+        radio.set_tx_addr(b"stm32").unwrap();
+        radio.set_rx_addr(0, b"stm32").unwrap();
         let mut tx = radio.tx().unwrap();
         let data = b"hello";
 
