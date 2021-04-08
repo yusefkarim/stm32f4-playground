@@ -1,0 +1,22 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+# See `probe-run --list-chips` to find your chip
+runner = "probe-run --chip STM32F401CCUx"
+
+rustflags = [
+    # Use the link.x script provided by the cortex-m-rt crate
+    "-C", "link-arg=-Tlink.x",
+    "-C", "linker=flip-link",
+    "-C", "link-arg=-Tdefmt.x",
+    # Needed if your flash or ram addresses are not aligned to 0x10000 in memory.x
+    "-C", "link-arg=--nmagic",
+]
+
+[build]
+# target = "thumbv6m-none-eabi"    # Cortex-M0 and Cortex-M0+
+# target = "thumbv7m-none-eabi"    # Cortex-M3
+# target = "thumbv7em-none-eabi"   # Cortex-M4 and Cortex-M7 (no FPU)
+target = "thumbv7em-none-eabihf" # Cortex-M4F and Cortex-M7F (with FPU)
+
+[alias]
+rb = "run --bin"
+rrb = "run --release --bin"

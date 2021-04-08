@@ -1,8 +1,0 @@
-[build]
-# Compilation target for Cortex-M4, with FPU
-target = "thumbv7em-none-eabihf"
-
-rustflags = [
-    # Use the link.x script provided by the cortex-m-rt crate
-    "-C", "link-arg=-Tlink.x",
-]
