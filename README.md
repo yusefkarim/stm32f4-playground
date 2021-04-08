@@ -46,16 +46,20 @@ cargo rb ${TARGET}
 
 ## Resources:
 
-* [cargo-binutils](https://github.com/rust-embedded/cargo-binutils)
-* [cargo-make](https://github.com/sagiegurari/cargo-make)
+* [probe-run](https://github.com/knurling-rs/probe-run)
+* [defmt](https://github.com/knurling-rs/defmt)
+* [flip-link](https://github.com/knurling-rs/flip-link)
 * [OpenOCD](http://openocd.org/)
 * [cargo-flash](https://github.com/probe-rs/cargo-flash)
-* [cortex-m-rt startup code crate](https://docs.rs/cortex-m-rt/0.6.12/cortex_m_rt/)
-* [cortex-m low-level access crate](https://docs.rs/cortex-m/0.6.2/cortex_m/)
-* [stm32f4 peripheral access crate](https://docs.rs/crate/stm32f4/0.10.0)
+* [cortex-m-rt startup code crate](https://docs.rs/cortex-m-rt)
+* [cortex-m low-level access crate](https://docs.rs/cortex-m)
+* [stm32f4 peripheral access crate](https://docs.rs/crate/stm32f4)
+* [stm32f4xx-hal](https://docs.rs/stm32f4xx-hal)
+* [Real-Time Interrupt-driven Concurrency (RTIC)](https://github.com/rtic-rs/cortex-m-rtic)
 * [The Embedded Rust Book](https://rust-embedded.github.io/book/)
-* [Real Time For the Masses](https://github.com/rtfm-rs/cortex-m-rtfm)
 * [A look into ways to implement and share data with interrupt handlers in Rust by therealprof](https://therealprof.github.io/blog/interrupt-comparison/)
+* [cargo-binutils](https://github.com/rust-embedded/cargo-binutils)
+* [cargo-make](https://github.com/sagiegurari/cargo-make)
 
 ## Miscellaneous Commands
 
