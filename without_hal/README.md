@@ -9,6 +9,8 @@
     - [x] [Advanced Timers](src/bin/advanced_timer.rs)
     - [ ] General Purpose Timers
 * [ ] UART
+    - [x] [Basic UART](src/bin/uart.rs)
+    - [ ] UART with Interrupts
 * [ ] I2C
 * [ ] SPI
 * [ ] DMA
