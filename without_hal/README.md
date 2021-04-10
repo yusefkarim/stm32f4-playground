@@ -6,7 +6,8 @@
 * [x] [SysTick](src/bin/systick.rs)
 * [x] [External Interrupts](src/bin/external_interrupt.rs)
 * [ ] Timers
-    - [x] [Advanced Timers](src/bin/advanced_timer.rs)
+    - [x] [Advanced Timers (TIM1)](src/bin/advanced_timer.rs)
+    - [x] [Three channel pulse-width modulation (PWM) via TIM1](src/bin/pwm_tim1.rs)
     - [ ] General Purpose Timers
 * [ ] UART
     - [x] [Basic UART](src/bin/uart.rs)

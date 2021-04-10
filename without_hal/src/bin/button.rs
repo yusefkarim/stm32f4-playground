@@ -50,6 +50,5 @@ fn main() -> ! {
         }
     };
 
-    defmt::error!("Uh oh, reached unreachable code!");
-    defmt::panic!();
+    defmt::panic!("Uh oh, reached unreachable code!");
 }
