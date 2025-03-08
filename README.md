@@ -1,4 +1,10 @@
-# Learning embedded systems with an STM32F4 and Rust!
+# 📁 Archived
+
+Checkout the [firmware-playground](https://github.com/yusefkarim/firmware-playground) for more up-to-date fun 🛝.
+
+---
+
+## Learning embedded systems with an STM32F4 and Rust!
 
 This repository is primarily for learning and trying random things.
 You may find basic code for learning embedded at the register level in [without_hal](without_hal).
